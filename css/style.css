@@ -144,7 +144,7 @@ button {
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
   white-space: nowrap;
   border: 0;
 }
@@ -177,6 +177,8 @@ p:last-child {
 }
 
 .display-name {
+  display: flex;
+  flex-direction: column;
   font-family: var(--font-display);
   font-weight: 400;
   font-size: 1.1rem;
@@ -431,7 +433,51 @@ header #main-nav ul li:last-child a {
   .content-section.image-left .section-image {
     order: -1;
   }
+  .section-inner.section-full {
+    grid-template-columns: 1fr;
+  }
 }
+@media (min-width: 1024px) {
+  .mistakes-image {
+    width: 83.3333333333%;
+    margin-inline: auto;
+  }
+}
+.mistakes-image img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: calc(var(--radius) * 2);
+  box-shadow: 0 4px 24px rgba(70, 77, 98, 0.25);
+}
+
+.mistakes-columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-6);
+}
+@media (min-width: 1024px) {
+  .mistakes-columns {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.mistake-item .section-subheading {
+  margin-top: 0;
+}
+
+.section-subheading {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.1rem, 2vw, 1.375rem);
+  color: var(--color-800);
+  letter-spacing: 0.02em;
+  margin-top: var(--s-6);
+  margin-bottom: var(--s-2);
+}
+
 .related-sites {
   background-color: var(--color-700);
   padding: var(--s-6) 0;

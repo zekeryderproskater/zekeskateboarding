@@ -1,0 +1,47 @@
+// _variables.scss
+
+:root {
+    // colors — derived from #464D62
+    --color-900: #0e1019;
+    --color-800: #1a1e2b;
+    --color-700: #2c3142;
+    --color-600: #3b4258;
+    --color-500: #464d62;
+    --color-400: #6b7489;
+    --color-300: #9099b0;
+    --color-200: #b8bece;
+    --color-100: #d7dae3;
+    --color-50:  #edf0f4;
+    --color-white: #f8f9fb;
+
+    // semantic tokens
+    --bg-dark:        var(--color-800);
+    --bg-section:     var(--color-50);
+    --bg-section-alt: var(--color-100);
+    --text-dark:      var(--color-800);
+    --text-light:     var(--color-white);
+    --accent:         var(--color-500);
+    --border:         var(--color-200);
+
+    // spacing (0.5rem baseline)
+    --s-1:  0.5rem;
+    --s-2:  1rem;
+    --s-3:  1.5rem;
+    --s-4:  2rem;
+    --s-5:  2.5rem;
+    --s-6:  3rem;
+    --s-8:  4rem;
+    --s-10: 5rem;
+    --s-12: 6rem;
+    --s-16: 8rem;
+
+    // layout
+    --radius:    4px;
+    --max-width: 1200px;
+    --gutter:    var(--s-4);
+
+    // fonts
+    --font-display: 'Bellota Text', cursive;
+    --font-body:    'DM Sans', sans-serif;
+    --font-heading: 'Oswald', sans-serif;
+}
