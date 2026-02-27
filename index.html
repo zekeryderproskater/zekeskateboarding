@@ -2,14 +2,18 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-55X728N688"></script>
+    <!-- Google tag (gtag.js) — deferred until after window.load -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-55X728N688');
+        window.addEventListener('load', function () {
+            var s = document.createElement('script');
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-55X728N688';
+            s.async = true;
+            document.head.appendChild(s);
+        });
     </script>
     <script defer src="https://embeds.iubenda.com/widgets/b25c7708-eea9-4e69-ac42-182b4f081a94.js"></script>
     <meta charset="UTF-8">
@@ -24,6 +28,7 @@
     <title>The Guide for Mastering Urban Skateboarding</title>
     <link rel="icon" type="image/webp" href="img/mastering-urban-skateboarding-logo-tiny.webp">
     <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -33,8 +38,11 @@
         <div class="header-inner">
 
             <a href="#home" class="logo-link">
-                <img src="img/mastering-urban-skateboarding-logo.webp" alt="Mastering Urban Skateboarding Logo"
-                    width="44" height="44">
+                <picture>
+                    <source media="(max-width: 1023px)" srcset="img/mastering-urban-skateboarding-logo-tiny.webp" type="image/webp">
+                    <img src="img/mastering-urban-skateboarding-logo.webp" alt="Mastering Urban Skateboarding Logo"
+                        width="44" height="44">
+                </picture>
                 <span class="display-name">
                     <span><span class="initial">M</span>astering <span class="initial">U</span>rban</span>
                     <span><span class="initial">S</span>kateboarding</span>
@@ -358,8 +366,11 @@
             <div class="footer-top">
 
                 <div class="footer-brand">
-                    <img src="img/mastering-urban-skateboarding-logo.webp" alt="Mastering Urban Skateboarding Logo"
-                        width="52" height="52">
+                    <picture>
+                        <source media="(max-width: 1023px)" srcset="img/mastering-urban-skateboarding-logo-tiny.webp" type="image/webp">
+                        <img src="img/mastering-urban-skateboarding-logo.webp" alt="Mastering Urban Skateboarding Logo"
+                            width="52" height="52">
+                    </picture>
                     <span class="display-name">
                         <span><span class="initial">M</span>astering <span class="initial">U</span>rban</span>
                         <span><span class="initial">S</span>kateboarding</span>
