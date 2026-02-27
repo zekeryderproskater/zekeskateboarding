@@ -1,8 +1,4 @@
 User-agent: *
 Allow: /
 
-Disallow: /wp-admin/
-Disallow: /wp-includes/
-Disallow: /wp-content/plugins/
-
 Sitemap: https://masteringurbanskateboarding.netlify.app/sitemap.xml

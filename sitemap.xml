@@ -7,34 +7,4 @@
     <priority>1.0</priority>
   </url>
 
-  <url>
-    <loc>https://masteringurbanskateboarding.netlify.app/urban-skateboarding/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://masteringurbanskateboarding.netlify.app/about-me/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://masteringurbanskateboarding.netlify.app/mastering-tricks-techniques/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://masteringurbanskateboarding.netlify.app/gear-prep-for-urban-skateboarding/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://masteringurbanskateboarding.netlify.app/choosing-urban-skateboarding-spots/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
 </urlset>
