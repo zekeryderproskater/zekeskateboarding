@@ -37,10 +37,27 @@ if (btn && nav) {
 
     // Close menu when a nav link is tapped (smooth-scroll UX on mobile)
     nav.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', () => {
-            if (nav.classList.contains('show-menu')) {
-                setMenu(false);
-            }
+        link.addEventListener('click', (e) => {
+            if (!nav.classList.contains('show-menu')) return;
+
+            const href = link.getAttribute('href');
+            if (!href || !href.startsWith('#')) return;
+
+            // Prevent the native anchor scroll from firing while the nav is
+            // still collapsing — it would scroll based on the tall open-nav
+            // header height and land in the wrong spot.
+            e.preventDefault();
+            setMenu(false);
+
+            // Wait for the max-height transition (0.4s) to finish, then scroll
+            // using the actual collapsed header height as the offset.
+            setTimeout(() => {
+                const target = document.querySelector(href);
+                if (!target) return;
+                const headerHeight = document.querySelector('header').offsetHeight;
+                const top = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+                window.scrollTo({ top, behavior: 'smooth' });
+            }, 400);
         });
     });
 }

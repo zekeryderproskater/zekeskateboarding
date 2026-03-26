@@ -226,15 +226,16 @@ header .logo-link .display-name {
 }
 header .menu-toggle {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.15rem;
   background: transparent;
   border: 1px solid var(--color-400);
   border-radius: var(--radius);
   color: var(--color-white);
   font-family: var(--font-body);
-  font-size: 0.875rem;
-  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  padding: 0.4rem 0.65rem;
   min-height: 44px;
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
@@ -279,7 +280,7 @@ header #main-nav ul li a:hover, header #main-nav ul li a:focus-visible {
 header #main-nav ul li:last-child a {
   border-bottom: none;
 }
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
   header .menu-toggle {
     display: none;
   }
@@ -341,6 +342,21 @@ header #main-nav ul li:last-child a {
 .hero .hero-content h1 {
   color: var(--color-white);
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.6);
+}
+
+.leaderboard-banner {
+  display: flex;
+  justify-content: center;
+  padding: var(--s-4) var(--s-4);
+  background-color: var(--color-900);
+}
+.leaderboard-banner a {
+  display: block;
+  line-height: 0;
+}
+.leaderboard-banner img {
+  max-width: 100%;
+  height: auto;
 }
 
 .content-section {
@@ -459,12 +475,28 @@ header #main-nav ul li:last-child a {
 }
 @media (min-width: 1024px) {
   .mistakes-columns {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 .mistake-item .section-subheading {
   margin-top: 0;
+}
+
+.mistake-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mistake-banner a {
+  display: block;
+  line-height: 0;
+}
+.mistake-banner img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  box-shadow: 0 4px 24px rgba(70, 77, 98, 0.25);
 }
 
 .section-subheading {
